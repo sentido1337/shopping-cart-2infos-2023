@@ -53,6 +53,7 @@ function formatarPreco(preco) {
               <img :src="item.img" class="icon-capa-livro" />
             </div>
             <div class="detalhes-livro">
+              
               <div>
                 <p>{{ item.title }}</p>
                 <p class="info-livro-preco">{{ formatarPreco(item.price) }}/un</p>
