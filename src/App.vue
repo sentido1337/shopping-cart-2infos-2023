@@ -10,7 +10,7 @@ const carrinho = ref({
 function removerItemCarrinho(item) {
   const index = carrinho.value.itens.findIndex((i) => i.id === item.id)
   carrinho.value.total -= item.total
-  carrinho.value.itens.splice(index, 1) 
+  carrinho.value.itens.splice(index, 1)
 }
 
 function atualizaQuantidadeItem(item) {
@@ -79,7 +79,7 @@ function formatarPreco(preco) {
                   />
                   {{ item.quantidade }}
                 </p>
-                <button @click="removerItemCarrinho(item)">Remover</button>
+                <button @click="removerItemCarrinho(item)">&#128281</button>
                 <p>Total: {{ formatarPreco(item.total) }}</p>
               </div>
             </div>
@@ -102,6 +102,23 @@ function formatarPreco(preco) {
   width: 100%;
 }
 
+.detalhes-livro input[type='number'] {
+  width: 50px;
+  text-align: center;
+  border: none;
+  border-bottom: 1px solid black;
+  background-color: transparent;
+  margin-left: 10px;
+}
+
+.detalhes-livro button {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  font-size: 2rem;
+  padding: 0; 
+  margin: 0;
+}
 .detalhes-livro p {
   margin: 0;
 }
